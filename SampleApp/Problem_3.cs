@@ -17,7 +17,6 @@ namespace SampleApp
             string[] arrstr1 = Console.ReadLine().Split(' ');
             int[] arr = new int[arraySize];
             int temp = Int32.MinValue;
-            bool isZero = false;
             bool containsAllNegative = true;
             for (int i = 0; i < arraySize; i++)
             {
