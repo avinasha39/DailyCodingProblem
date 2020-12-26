@@ -6,6 +6,7 @@
 //You can modify the input array in-place.
 
 using System;
+using System.Collections.Generic;
 
 namespace SampleApp
 {
@@ -13,31 +14,20 @@ namespace SampleApp
     {
         public static void Solve(int[] nums)
         {
-            int arraySize = Int32.Parse(Console.ReadLine());
-            string[] arrstr1 = Console.ReadLine().Split(' ');
-            int[] arr = new int[arraySize];
-            int temp = Int32.MinValue;
-            bool containsAllNegative = true;
-            for (int i = 0; i < arraySize; i++)
-            {
-                arr[i] = Int32.Parse(arrstr1[i]);
+            HashSet<int> hashSet = new HashSet<int>(nums);
+            int minValue = 1;
 
-                if (Int32.Parse(arrstr1[i]) == 0)
+            while (true)
+            {
+                if (!hashSet.Contains(minValue))
                 {
-                }
-                if (Int32.Parse(arrstr1[i]) >= 0)
-                {
-                    containsAllNegative = false;
+                    break;
                 }
 
-
-
+                minValue++;
             }
 
-            if (containsAllNegative)
-            {
-                Console.WriteLine(0);
-            }
+            Console.WriteLine(minValue);
         }
              
     }
