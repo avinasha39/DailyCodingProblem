@@ -24,7 +24,6 @@ namespace SampleApp
 
                 if (Int32.Parse(arrstr1[i]) == 0)
                 {
-                    isZero = true;
                 }
                 if (Int32.Parse(arrstr1[i]) >= 0)
                 {

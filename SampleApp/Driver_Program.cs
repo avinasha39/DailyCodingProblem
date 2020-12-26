@@ -18,8 +18,10 @@ namespace SampleApp
                     arr[i] = Int32.Parse(arrstr1[i]);
                 }
 
+                var program_4 = new Problem_4();
+                program_4.Solve();
                 //Problem_2.Solve(arr);
-                Problem_3.Solve(arr);
+                //Problem_3.Solve(arr);
 
             }
         }
